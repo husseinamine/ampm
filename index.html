@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <header>
+      <h2>Khalina nshuf</h2>
+      <p>AM aw PM?</p>
+    </header>
+    <div class="form-container">
+      <div class="slide">
+        <label>Lyom shu?</label>
+        <select id="today">
+          <option value="">Select...</option>
+          <option value="0">AM</option>
+          <option value="1">PM</option>
+        </select>
+        <div class="button-group">
+          <button class="button-child" onclick="next()">Next</button>
+        </div>
+      </div>
+      <div class="slide">
+        <label>Ay yom badek?</label>
+        <input type="date" id="tomorrow">
+        <div class="button-group">
+          <button class="button-child back" onclick="back()">Back</button>
+          <button class="button-child" onclick="calculate()">Done</button>
+        </div>
+      </div>
+      <div class="slide">
+        <div id="result">
+        </div>
+        <h3></h3>
+        <div class="button-group">
+          <button id="submitBtn" class="button-child" onclick="restart()">
+            <span class="btn-text">Restart</span>
+            <span class="btn-loader" hidden></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>7sebe la elek</p>
+    </footer>
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <script src="/static/script.js"></script>
+  </body>
+</html>
